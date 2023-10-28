@@ -1,0 +1,36 @@
+{# {{form_start(f)}}
+{{form_label(f.name)}}
+{{form_widget(f.name)}}
+{{form_end(f)}} #}
+
+{{form(f)}}
+
+{# {{form_start(f2)}}
+{{form_label(f2.min)}}
+{{form_widget(f2.min)}}
+{{form_label(f2.max)}}
+{{form_widget(f2.max)}}
+{{form_end(f2)}} #}
+
+{{form(f2)}}
+
+<table border="3">
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>nombre de salle</td>
+        <td>Action</td>
+        
+        
+        
+    </tr>
+    {% for a in departements %}
+    <tr>
+        <td>{{a.id}}</td>
+        <td>{{a.name | upper}}</td>
+        <td>{{a.nbrSalle}}</td>
+        <td><a href ="{{path('deleteDepartement',{'id':a.id})}}">Delete</a></td>
+        
+    </tr>
+    {% endfor %}
+</table>

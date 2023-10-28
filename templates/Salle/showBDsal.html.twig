@@ -1,0 +1,22 @@
+<table border="3">
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>nbrH</td>
+        <td>nameSalle</td>
+        <td>Action</td>
+
+        
+        
+        
+    </tr>
+    {% for a in Salle %}
+    <tr>
+        <td>{{a.id}}</td>
+        <td>{{a.name | upper}}</td>
+        <td>{{a.nbrH }}</td>
+        <td>{{a.nameSalle | upper}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href ="{{path('Salle_add')}}">Add</a>
